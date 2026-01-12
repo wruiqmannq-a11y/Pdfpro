@@ -1,0 +1,169 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI PDF Pro Max | Advanced Text to PDF Converter & Student Resource</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #0b1120; color: #f1f5f9; scroll-behavior: smooth; }
+        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .article-box { background: #1e293b; padding: 2rem; border-radius: 1.5rem; margin-bottom: 2rem; border-left: 4px solid #38bdf8; }
+    </style>
+</head>
+<body>
+
+    <nav class="sticky top-0 z-50 glass-card px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-800 tracking-tighter gradient-text">AI PDF PRO MAX</h1>
+            <div class="hidden md:flex space-x-6 text-sm font-bold uppercase tracking-widest text-slate-400">
+                <a href="#tool" class="hover:text-blue-400 transition">Converter</a>
+                <a href="#about" class="hover:text-blue-400 transition">About Me</a>
+                <a href="#articles" class="hover:text-blue-400 transition">Guides</a>
+                <a href="#privacy" class="hover:text-blue-400 transition">Legal</a>
+                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="tool" class="pt-16 pb-12 px-4">
+        <div class="max-w-4xl mx-auto glass-card rounded-[3rem] p-8 md:p-12 shadow-2xl border-blue-500/20">
+            <div class="text-center mb-10">
+                <span class="px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-xs font-extrabold uppercase tracking-widest border border-blue-500/20">Official Student Utility</span>
+                <h2 class="text-5xl font-extrabold mt-6 mb-4 leading-tight">Professional <span class="gradient-text">PDF Engine</span></h2>
+                <p class="text-slate-400">Secure, Client-Side, and 100% Free Forever.</p>
+            </div>
+
+            <textarea id="userInput" rows="12" class="w-full bg-slate-900/50 rounded-3xl p-6 text-lg border border-slate-700 outline-none focus:ring-4 focus:ring-blue-500/20 transition-all placeholder:text-slate-600 mb-8" placeholder="Enter your text here..."></textarea>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <select id="fontStyle" class="bg-slate-800 p-4 rounded-2xl border border-slate-700 outline-none focus:border-blue-500 transition-all">
+                    <option value="helvetica">Modern Sans</option>
+                    <option value="times">Classic Serif</option>
+                    <option value="courier">Monospace</option>
+                </select>
+                <select id="fontSize" class="bg-slate-800 p-4 rounded-2xl border border-slate-700 outline-none">
+                    <option value="12">12px (Small)</option>
+                    <option value="14" selected>14px (Normal)</option>
+                    <option value="18">18px (Large)</option>
+                </select>
+                <button onclick="generatePDF()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 py-4 rounded-2xl font-bold shadow-xl transform active:scale-95 transition-all uppercase">
+                    Download PDF
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="glass-card p-12 rounded-[3.5rem] border-blue-500/20 text-center">
+            <h2 class="text-4xl font-bold mb-8 gradient-text uppercase">About the Developer & Vision</h2>
+            <div class="max-w-3xl mx-auto text-slate-300 leading-loose text-lg">
+                <p class="mb-6 italic text-2xl font-light text-blue-400">"Education is the most powerful weapon which you can use to change the world."</p>
+                <p class="mb-4">My name is <strong>Ali Haris</strong>, a 16-year-old student from Karachi, Pakistan. I created <strong>AI PDF Pro Max</strong> as part of my 10th-grade project. Growing up in a digital world, I realized that many students lack access to professional software like Adobe Acrobat because of high subscription costs. I decided to learn web development to solve this problem for my community.</p>
+                <p>This tool is more than just a converter; it is a symbol of hard work and passion. Being a student myself, I understand the value of secure, free, and fast digital tools. Every line of code here is written to help you succeed in your academic journey without spending a single rupee.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="articles" class="max-w-6xl mx-auto px-6 py-20">
+        <h2 class="text-4xl font-bold mb-16 text-center gradient-text uppercase">Educational Resource Center</h2>
+        
+        <div class="space-y-10">
+            <div class="article-box">
+                <h3 class="text-2xl mb-4 font-bold">1. The Importance of PDF in Modern Education</h3>
+                <p class="text-slate-400">In the current digital era, the Portable Document Format (PDF) has become the backbone of academic communication. Whether it's a thesis from Karachi University or notes from a small school, PDF ensures that the information is preserved exactly as intended. This format is crucial for students because it allows them to read documents across different operating systems without layout issues.</p>
+            </div>
+
+            <div class="article-box">
+                <h3 class="text-2xl mb-4 font-bold">2. Digital Note-Taking: A Strategy for 10th Grade Success</h3>
+                <p class="text-slate-400">Success in board exams requires smart work. Digital note-taking allows students to quickly search through their material. By using our AI PDF Pro Max, you can turn your typed lecture summaries into professional PDFs that are easy to share with teachers for feedback or with classmates for group study sessions.</p>
+            </div>
+
+            <div class="article-box">
+                <h3 class="text-2xl mb-4 font-bold">3. Client-Side Security: Protecting Your Data</h3>
+                <p class="text-slate-400">Privacy is a fundamental right. Unlike other online tools, our AI PDF engine works locally. This means your text never leaves your device. In an age of data breaches, using local-only tools for your sensitive assignments and documents is the safest practice you can adopt.</p>
+            </div>
+
+            <div class="article-box">
+                <h3 class="text-2xl mb-4 font-bold">4. Formatting Tips for Professional Documents</h3>
+                <p class="text-slate-400">A professional document should be clean. Always use standard font sizes (12-14px) for the body text. Our tool provides these options to ensure that your printed PDFs look neat and are easy to read for examiners, helping you secure better grades through presentation.</p>
+            </div>
+
+            <div class="article-box">
+                <h3 class="text-2xl mb-4 font-bold">5. The Environmental Impact of Paperless Studying</h3>
+                <p class="text-slate-400">Switching to digital PDFs saves millions of trees every year. By converting your text to PDF instead of printing it on paper, you are contributing to a greener and more sustainable Pakistan. Small steps like using digital tools can lead to big environmental changes.</p>
+            </div>
+
+            <div class="article-box">
+                <h3 class="text-2xl mb-4 font-bold">6. Managing Large Academic Libraries Digitally</h3>
+                <p class="text-slate-400">Students often struggle with stacks of papers. A digital PDF library allows you to store thousands of books and notes in a single cloud folder. Our tool helps you start this journey by allowing you to create your own digital books from simple text entries.</p>
+            </div>
+
+            <div class="article-box">
+                <h3 class="text-2xl mb-4 font-bold">7. How PDFs Facilitate Remote Learning</h3>
+                <p class="text-slate-400">Remote learning has become a reality. PDFs are the most reliable way to send assignments to teachers over slow internet connections because they are highly compressed. This tool is optimized to produce lightweight PDFs that upload quickly even on basic 3G/4G networks.</p>
+            </div>
+
+            <div class="article-box">
+                <h3 class="text-2xl mb-4 font-bold">8. Preparing for Future Tech Careers</h3>
+                <p class="text-slate-400">By using web-based tools like AI PDF Pro Max, students get familiar with how technology works. This is the first step toward a career in software engineering or data science. As a student developer, I encourage everyone to explore how code can solve real-world problems.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="privacy" class="max-w-6xl mx-auto px-6 py-20 border-t border-slate-800">
+        <h2 class="text-4xl font-bold mb-12 text-center gradient-text">LEGAL COMPLIANCE</h2>
+        <div class="grid md:grid-cols-2 gap-12 text-slate-400">
+            <div class="glass-card p-8 rounded-3xl">
+                <h3 class="text-2xl font-bold text-white mb-4">Privacy Policy</h3>
+                <p class="text-sm leading-relaxed">We take your privacy seriously. AI PDF Pro Max does not store any personal information. All text processing happens on your local machine using JavaScript. We do not use persistent cookies to track your behavior. Third-party advertisers like Google AdSense may use cookies to show relevant ads based on your interests.</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl">
+                <h3 class="text-2xl font-bold text-white mb-4">Terms of Use</h3>
+                <p class="text-sm leading-relaxed">This tool is provided for educational and personal use. Users are responsible for the content they convert. We are not liable for any data loss or misuse of the documents generated. By using this tool, you agree to respect the privacy of others and use the service ethically.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-20 text-center glass-card mt-20 border-t border-slate-800">
+        <h2 class="text-3xl font-bold mb-6 gradient-text">GET IN TOUCH</h2>
+        <p class="text-slate-400 mb-8 max-w-lg mx-auto px-4">Found a bug or want to collaborate? I am always open to feedback from the community.</p>
+        <div class="space-y-4">
+            <a href="mailto:aliharis0341@gmail.com" class="text-3xl font-800 text-blue-400 hover:text-indigo-400 transition underline">aliharis0341@gmail.com</a>
+            <p class="text-slate-500 mt-10">© 2026 AI PDF PRO MAX - Developed with ❤️ in Karachi</p>
+        </div>
+    </footer>
+
+    <script>
+        async function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            const text = document.getElementById('userInput').value;
+            const fontSize = parseInt(document.getElementById('fontSize').value);
+            const fontStyle = document.getElementById('fontStyle').value;
+
+            if (!text.trim()) {
+                alert("Piyare bhai, pehle kuch text toh likhein!");
+                return;
+            }
+
+            doc.setFont(fontStyle);
+            doc.setFontSize(fontSize);
+            const margin = 15;
+            const pageWidth = doc.internal.pageSize.getWidth();
+            const maxLineWidth = pageWidth - (margin * 2);
+            
+            const lines = doc.splitTextToSize(text, maxLineWidth);
+            doc.text(lines, margin, 20);
+            
+            doc.save("AI_PDF_Pro_Max.pdf");
+        }
+    </script>
+</body>
+</html>
